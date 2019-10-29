@@ -1,12 +1,25 @@
-'use strict'
-const fs = require('fs');
-const xml2js = require('xml2js');
+import Xml2js from 'xml2js'
+import Log4js from 'log4js'
+import Path from 'path'
 class Util {
+    mLogger: Log4js.Logger
     constructor() {
+        Log4js.configure({
+            appenders: { cheese: { type: 'file', filename: 'cheese.txt' } },
+            categories: { default: { appenders: ['cheese'], level: 'error' } }
+        });
+        this.mLogger = Log4js.getLogger('cheese');
+        this.mLogger.level = 'debug';
     }
-    parseXMLAsync(xml) {
+    get logger() {
+        return this.mLogger
+    }
+    resolvePath(...pathparams: string[]) {
+        return Path.resolve(__dirname, '../', ...pathparams)
+    }
+    parseXMLAsync(xml: Xml2js.convertableToString) {
         return new Promise(function (resolve, reject) {
-            xml2js.parseString(xml, {
+            Xml2js.parseString(xml, {
                 trim: true,
                 explicitArray: false
             }, function (err, content) {
@@ -17,8 +30,8 @@ class Util {
             });
         })
     }
-    formatMessage(result) {
-        let message = {}
+    formatMessage(result: any) {
+        let message: any = {}
         if (typeof result === 'object') {
             let keys = Object.keys(result)
             for (let i = 0, length = keys.length; i < length; i++) {
@@ -48,4 +61,4 @@ class Util {
         return message
     }
 }
-module.exports = new Util()
+export default new Util()
