@@ -1,6 +1,7 @@
 import Xml2js from 'xml2js'
 import Log4js from 'log4js'
 import Path from 'path'
+
 class Util {
     mLogger: Log4js.Logger
     constructor() {
@@ -10,9 +11,6 @@ class Util {
         });
         this.mLogger = Log4js.getLogger('cheese');
         this.mLogger.level = 'debug';
-    }
-    get logger() {
-        return this.mLogger
     }
     resolvePath(...pathparams: string[]) {
         return Path.resolve(__dirname, '../', ...pathparams)
@@ -59,6 +57,29 @@ class Util {
             }
         }
         return message
+    }
+    trace(message: any, ...args: any[]) {
+        this.mLogger.trace(message, ...args)
+    }
+
+    debug(message: any, ...args: any[]) {
+        this.mLogger.debug(message, ...args)
+    }
+
+    info(message: any, ...args: any[]) {
+        this.mLogger.info(message, ...args)
+    }
+
+    warn(message: any, ...args: any[]) {
+        this.mLogger.warn(message, ...args)
+    }
+
+    error(message: any, ...args: any[]) {
+        this.mLogger.error(message, ...args)
+    }
+
+    fatal(message: any, ...args: any[]) {
+        this.mLogger.fatal(message, ...args)
     }
 }
 export default new Util()

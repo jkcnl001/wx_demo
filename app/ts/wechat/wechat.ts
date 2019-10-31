@@ -1,8 +1,9 @@
 import Axios from "axios"
 import Fs from 'fs'
 import Util from './../Util'
-const wechat_dynamic_info: string = Util.resolvePath('config', 'wechat.json')
-const wechat_static_info: string = Util.resolvePath('config', 'info.json')
+import tpl from './tpl'
+const wechat_dynamic_info: string = Util.resolvePath('config', 'token.json')
+const wechat_static_info: string = Util.resolvePath('config', 'account.json')
 const static_info = JSON.parse(Fs.readFileSync(wechat_static_info).toString())
 const prefix = `https://api.weixin.qq.com/cgi-bin/`
 const api = {

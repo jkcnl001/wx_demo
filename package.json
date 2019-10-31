@@ -1,44 +1,46 @@
 {
-  "name": "wx_demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jkcnl001/wx_demo.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jkcnl001/wx_demo/issues"
-  },
-  "homepage": "https://github.com/jkcnl001/wx_demo#readme",
-  "dependencies": {
-    "axios": "^0.19.0",
-    "koa": "^2.11.0",
-    "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0",
-    "log4js": "^5.3.0",
-    "moment": "^2.24.0",
-    "raw-body": "^2.4.1",
-    "sha1": "^1.1.1",
-    "xml2js": "^0.4.22"
-  },
-  "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/koa": "^2.0.51",
-    "@types/koa-bodyparser": "^4.3.0",
-    "@types/koa-logger": "^3.1.1",
-    "@types/koa-router": "^7.0.42",
-    "@types/log4js": "^2.3.5",
-    "@types/moment": "^2.13.0",
-    "@types/node": "^12.11.7",
-    "@types/raw-body": "^2.3.0",
-    "@types/sha1": "^1.1.2",
-    "@types/xml2js": "^0.4.5",
-    "koa-logger": "^3.2.1"
-  }
+    "name": "wx_demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jkcnl001/wx_demo.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jkcnl001/wx_demo/issues"
+    },
+    "homepage": "https://github.com/jkcnl001/wx_demo#readme",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "ejs": "^2.7.1",
+        "koa": "^2.11.0",
+        "koa-bodyparser": "^4.2.1",
+        "koa-router": "^7.4.0",
+        "log4js": "^5.3.0",
+        "moment": "^2.24.0",
+        "raw-body": "^2.4.1",
+        "sha1": "^1.1.1",
+        "xml2js": "^0.4.22"
+    },
+    "devDependencies": {
+        "@types/axios": "^0.14.0",
+        "@types/ejs": "^2.6.3",
+        "@types/koa": "^2.0.51",
+        "@types/koa-bodyparser": "^4.3.0",
+        "@types/koa-logger": "^3.1.1",
+        "@types/koa-router": "^7.0.42",
+        "@types/log4js": "^2.3.5",
+        "@types/moment": "^2.13.0",
+        "@types/node": "^12.11.7",
+        "@types/raw-body": "^2.3.0",
+        "@types/sha1": "^1.1.2",
+        "@types/xml2js": "^0.4.5",
+        "koa-logger": "^3.2.1"
+    }
 }
