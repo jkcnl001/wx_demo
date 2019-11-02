@@ -1,6 +1,6 @@
 import Ejs, { clearCache } from 'ejs'
 class Tpl {
-    tplPassiveAnswer = `
+    passiveAnswer = `
     <xml>
         <ToUserName><![CDATA[<%-toUserName-%>]]></ToUserName>
         <FromUserName><![CDATA[<%-fromUserName-%>]]></FromUserName>
@@ -46,7 +46,7 @@ class Tpl {
     </xml>
     `
     getTpl(data: any) {
-        return Ejs.render(this.tplPassiveAnswer, data)
+        return Ejs.render(this.passiveAnswer, data)
     }
 }
 
